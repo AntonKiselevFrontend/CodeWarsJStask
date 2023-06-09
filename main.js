@@ -25,3 +25,30 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
   let res = Math.abs(dadYearsOld - sonYearsOld * 2)
   return res
 }
+//The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, 
+//rounded down to the integer (= floored).
+function cockroachSpeed(s) {
+  let res = s * 100000 / 3600
+  return Math.floor(res)
+}
+//Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+//Return your answer as a number.
+function sumMix(x){
+  let sum = 0
+  for (let i = 0; i < x.length; i++) {
+      sum += Number(x[i])
+  }
+  return sum
+}
+//You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+//Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+//For example, when the input is green, output should be yellow.
+function updateLight(current) {
+  if (current == "green") {
+    return "yellow"
+  } else if (current == "yellow") {
+    return "red"
+  } else {
+    return "green"
+  }
+}
