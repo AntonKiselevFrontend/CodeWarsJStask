@@ -63,3 +63,9 @@ function findShort(s){
   let arr = Math.min(...s.split(" ").map(item => item.length))
   return arr
 }
+//Given an array of integers your solution should find the smallest integer.
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
