@@ -16,3 +16,16 @@ function isValidWalk(walk) {
   } 
   return walk.length === 10 && ns === 0 && ew === 0
 }
+//Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, 
+//which is the number of times you must multiply the digits in num until you reach a single digit.
+function persistence(num) {
+  if (String(num).split("").length === 1) {
+    return 0
+  }
+  let arr = String(num).split("")
+  let res = 1;
+  for (let i = 0; i < arr.length; i++) {
+    res *= parseFloat(arr[i])
+  }
+  return 1 + persistence(parseFloat(res))
+}
