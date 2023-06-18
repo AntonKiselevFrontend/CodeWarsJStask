@@ -79,3 +79,19 @@ function oddOrEven(array) {
 function accum(s) {
 	return [...s].map((elem, index) => elem.toUpperCase() + elem.toLowerCase().repeat(index)).join("-");
 }
+//Trolls are attacking your comment section!
+//A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+//Your task is to write a function that takes a string and return a new string with all vowels removed.
+//For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+//Note: for this kata y isn't considered a vowel.
+function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
+//Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+var summation = function (num) {
+  let res = 0;
+  for (let i = 1; i <= num; i++) {
+    res += i
+  }
+  return res
+}
