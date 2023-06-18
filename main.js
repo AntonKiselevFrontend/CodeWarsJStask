@@ -75,3 +75,7 @@ class SmallestIntegerFinder {
 function oddOrEven(array) {
   return array.reduce(function (sum, item) {return sum + item}, 0) % 2 === 0 ? "even" : "odd";
 }
+//This time no story, no theory. The examples below show you how to write function accum: accum("abcd") -> "A-Bb-Ccc-Dddd"
+function accum(s) {
+	return [...s].map((elem, index) => elem.toUpperCase() + elem.toLowerCase().repeat(index)).join("-");
+}
