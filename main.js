@@ -95,3 +95,20 @@ var summation = function (num) {
   }
   return res
 }
+//You get an array of numbers, return the sum of all of the positives ones.
+//Example [1,-4,7,12] => 1 + 7 + 12 = 20
+//Note: if there is nothing to sum, the sum is default to 0.
+function positiveSum(arr) {
+  return arr.reduce((sum, num) => {
+    if (num > 0) {return sum + num}
+    return sum
+  }, 0)
+}
+//Build a function that returns an array of integers from n to 1 where n>0.
+const reverseSeq = n => {
+  let arr = []
+  for (let i = n; i >= 1; i--) {
+    arr.push(i)
+  }
+  return arr
+};
