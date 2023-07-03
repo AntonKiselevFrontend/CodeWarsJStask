@@ -117,3 +117,26 @@ var isSquare = function(n){
   return Number.isInteger(Math.sqrt(n));
   return n < 0 ? false : true;
 }
+//Mr. Scrooge has a sum of money 'P' that he wants to invest. Before he does, he wants to know how many years 'Y' this sum 'P' has to be kept in the bank 
+//in order for it to amount to a desired sum of money 'D'.
+//The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly. After paying taxes 'T' for the year the new sum is re-invested.
+//Your task is to complete the method provided and return the number of years 'Y' as a whole in order for Mr. Scrooge to get the desired sum.
+function calculateYears(principal, interest, tax, desired) {
+   let years = 0;
+  while (principal < desired) {
+    const interestEarned = principal * interest;
+    const taxesPaid = interestEarned * tax;
+    principal += interestEarned - taxesPaid;
+    years++;
+  }
+  return years;
+}
+//Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+function doubleChar(str) {
+  let newStr = ""
+  for (let i = 0; i < str.length; i++) {
+    newStr += str[i].repeat(2)
+  }
+  return newStr
+}
+
