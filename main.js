@@ -139,4 +139,18 @@ function doubleChar(str) {
   }
   return newStr
 }
-
+//Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+function reverseWords(str) {
+  const result = str.split(" ").map((item) => item.split("").reverse().join(""), 0)
+  return result.join(" ")
+}
+//Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+//For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), 
+//is part of the fourth quarter.
+const quarterOf = (month) => {
+    return month <= 3 ? 1 : month <= 6 ? 2 : month <= 9 ? 3 : month <= 12 ? 4 : "wrong";
+}
+//Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+function solution(str, ending){
+  return str.endsWith(ending)
+}
