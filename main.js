@@ -154,3 +154,21 @@ const quarterOf = (month) => {
 function solution(str, ending){
   return str.endsWith(ending)
 }
+//Count the divisible numbers. Создайте функцию, которая принимает 3 числа - x, y, k. 
+//И возвращает количество целых чисел в промежутке от x до y, которые делятся на k.
+//x = 6, y = 11, k = 2 Функция должна вернуть 3, так как в промежутке от 6 до 11 три числа делятся на 2 (6, 8, 10).
+function findNumbers (x, y, k) {
+  let arr = []
+  for (let i = x; i <= y; i++) {
+    if (i%k == 0) arr.push(i)
+  }
+  return arr.length
+}
+// Or 
+function countDivisibleNumbers(x, y, k) {
+  let count = 0;
+  for (let i = x; i <= y; i++) {
+    if (i % k === 0) count++;
+  }
+  return count;
+}
